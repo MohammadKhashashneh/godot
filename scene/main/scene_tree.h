@@ -88,7 +88,9 @@ private:
 
 	uint64_t tree_version = 1;
 	float physics_process_time = 1.0;
+	float physics_total_time = 1.0;
 	float process_time = 1.0;
+	float process_total_time = 1.0;
 	bool accept_quit = true;
 	bool quit_on_go_back = true;
 
@@ -249,7 +251,9 @@ public:
 	void quit(int p_exit_code = -1);
 
 	_FORCE_INLINE_ float get_physics_process_time() const { return physics_process_time; }
+	_FORCE_INLINE_ float get_physics_total_time() const { return physics_total_time; }
 	_FORCE_INLINE_ float get_process_time() const { return process_time; }
+	_FORCE_INLINE_ float get_process_total_time() const { return process_total_time; }
 
 #ifdef TOOLS_ENABLED
 	bool is_node_being_edited(const Node *p_node) const;
